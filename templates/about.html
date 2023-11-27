@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О программе</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ffc0cb; /* Розовый цвет фона */
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index">Лабораторная 2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Справка
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/about">О программе</a>
+                            <a class="dropdown-item" href="/home">Хеширование файла</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>О программе</h1>
+        <p>Работа выполнена Сенькиным А.Е. ПИбд-42</p>
+        <p>Группа: ПИбд-42</p>
+        <p>Вариант - 3 (Хэш-функция MD5).</p>
+        <p>MD5 — криптографический хеш-алгоритм, который принимает на входе сообщение произвольной длины и возвращает хеш-значение фиксированной длины, равной 128 битам, обычно представленное в виде 32-значного шестнадцатеричного числа.</p>
+        <p>Основные шаги алгоритма MD5:</p>
+        <p>1. Инициализация переменных: Устанавливаются четыре 32-битных переменных (A, B, C, D), которые будут использоваться в процессе вычислений.</p>
+        <p>2. Предварительная обработка сообщения:</p>
+        <p> - Дополняется сообщение так, чтобы его длина стала в 64 битах меньше, чем кратное 512.</p>
+        <p> - Добавляется бит "1" и некоторое количество бит "0" в зависимости от длины сообщения.</p>
+        <p>Обработка блоков сообщения:</p>
+        <p> - Сообщение разбивается на блоки по 512 бит.</p>
+        <p> - Каждый блок подвергается обработке.</p>
+        <p>Обработка блока:</p>
+        <p> - Каждый блок разбивается на 16 32-битных слов.</p>
+        <p> - Выполняются 64 раунда преобразований, в которых используются нелинейные функции, побитовые операции и операции над словами.</p>
+        <p>Финальная обработка:</p>
+        <p>Результаты предыдущих операций объединяются и представляют собой 128-битный хеш.</p>
+        <p>Возможности для сохранения и выбора обрабатываемого файла:</p>
+        <p> - Пользователь выбирает и загружает файл из системы на сервер</p>
+        <p> - После обработки файла на сервере, то есть после хеширования файла, файл сохраняется на сервере и пользователь автоматически перенаправляется для скачивания обработанного файла</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
